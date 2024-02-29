@@ -23,3 +23,9 @@ overlay.addEventListener('click', addHiddenClass);
 for (let i=0; i < btnShowModalWindow.length; i++){
     btnShowModalWindow[i].addEventListener('click', rmvHiddenClass);
 };
+
+document.addEventListener('keydown', function (e) {
+    if(e.key == 'Escape' && !modalWindow.classList.contains('hidden')){
+       addHiddenClass(); 
+    }
+});
